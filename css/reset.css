@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl,button, main, section, dd, title, article, figure, figcaption, main, aside, main, aside, title, sub {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 1em;
+}
+a {
+	text-decoration: none;
+	color: #444;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	border: none;
+}
+body {
+	font-family: /*"Roboto",*/ /*"Open Sans",*/ /*"Noto Sans KR",*/ "Pretendard",/*"EBSHMJESaeronRA",*/ sans-serif;
+	line-height: 1.5;
+}
+
+@font-face {
+    font-family: 'EBSHMJESaeronRA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/EBSHMJESaeronRA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'EBSHunminjeongeumSBA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/EBSHunminjeongeum.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChosunCentennial';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ChosunCentennial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* @font-face {
+    font-family: 'EBSHunminjeongeum-SB';
+    src: url('../fonts/EBSHunminjeongeum-SB.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'EBSHunminjeongeum-SB_R';
+    src: url('../fonts/EBSHunminjeongeum-R.woff') format('woff');
+}
+@font-face {
+    font-family: 'EBSHunminjeongeum-SB_L';
+    src: url('../fonts/EBSHunminjeongeum-L.woff') format('woff');
+}
+@font-face {
+    font-family: 'EBSHMJESaeron-SB';
+    src: url('../fonts/EBSHMJESaeron-SB.woff') format('woff');
+    src: url('../fonts/EBSHMJESaeron-R.woff') format('woff');
+    src: url('../fonts/EBSHMJESaeron-L.woff') format('woff');
+} */
+/* :root {
+    --font-family-saeron: 'EBSHMJESaeron-SB', sans-serif;
+    --font-family-hunmin: 'EBSHMJESaeron-SB', sans-serif;
+} */

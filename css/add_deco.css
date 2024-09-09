@@ -1,0 +1,1297 @@
+body {
+    background-color: #F6F3EE;
+}
+#dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.7);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: 100%;
+    background-color: #F6F3EE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .mobile_wrap {
+        display: none;
+    }
+    .pc_wrap {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .header_pc {
+            position: relative;
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 36px;
+            height: 96px;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .home {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 96px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .tab {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                .tab_menu {
+                    width: 162px;
+                    height: 60px;
+                    background-color: #071B34;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    align-content: center;
+                }
+                .tab_btm {
+                    bottom: -80px;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        background-color: #071B34;
+                        text-align: center;
+                        color: #fff;
+                        padding-inline: 12px;
+                        gap: 20px;
+                        box-sizing: border-box;
+                        .hello {
+                            width: 100%;
+                            font-family: "EBSHunminjeongeumSBA";
+                            font-size: 16px;
+                            line-height: 22px;
+                            text-align: center;
+                            align-items: center;
+                            flex-grow: 1;
+                            padding-block: 20px;
+                            border-block: 1px solid #304055;
+                            p {
+                                font-size: 1.25rem;
+                                line-height: 30px;
+                                color: #fff;
+                                text-align: left;
+                                span {
+                                    color: #E75752;
+                                }
+                            }
+                        }
+                        li {
+                            display: flex;
+                            align-items: center;
+                            align-content: center;
+                            justify-content: flex-start;
+                            padding-inline: 10px;
+                            text-align: left;
+                            font-weight: bold;
+                            a {
+                                display: block;
+                                color: #fff;
+                            }
+                        }
+                        .log_out {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            align-content: center;
+                            justify-content: flex-start;
+                            padding-inline: 10px;
+                            text-align: left;
+                            border-top: 1px solid #304055;
+                            box-sizing: border-box;
+                            padding-block: 20px;
+                            a {
+                                display: block;
+                                color: #fff;
+                                width: 100%;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        section.select_set {
+            position: absolute;
+            width: 768px;
+            height: 640px;
+            padding: 48px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: flex-start;
+            background-color: #fff;
+            overflow-y: auto;
+            z-index: 999;
+            border-radius: 10px;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            &:has(article.set_bg) {
+                height: auto;
+            }
+            &:has(article.set_intro) {
+                height: auto;
+                width: fit-content;
+            }
+            &:has(article.set_bookcase) {
+                button {
+                }
+                p.mypage {
+                }
+            }
+            .set_close {
+                position: relative;
+                display: block;
+                justify-content: flex-end;
+                position: sticky;
+                z-index: 999;
+                right: 0;
+                top: 0;
+                a {
+                    position: absolute;
+                    display: flex;
+                    width: fit-content;
+                    right: 0;
+                    top: 0;
+                }
+            }
+            article.set_intro {
+                position: relative;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-grow: 1;
+                gap: 40px;
+                padding-top: 24px;
+
+                .intro_close {
+                    position: absolute;
+                    display: block;
+                    justify-content: flex-end;
+                    /* position: sticky; */
+                    width: 36px;
+                    height: 36px;
+                    aspect-ratio: 1/1;
+                    z-index: 999;
+                    right: 0;
+                    top: 0;
+                    transform: translate(100%, -100%);
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .title {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 6px;
+                    span {
+                        font-family: "EBSHunminjeongeumSBA";
+                        line-height: 22px;
+                        color: #6C9460;
+                    }
+                    h3 {
+                        font-family: "EBSHunminjeongeumSBA";
+                        font-size: 28px;
+                        line-height: 42px;
+                        color: #222;
+                    }
+                }
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 24px;
+                    li {
+                        aspect-ratio: 1/1;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #fff;
+                        padding: 0;
+                        border-radius: 2px;
+                        overflow: hidden;
+                        a {
+                            width: 208px;
+                            height: 208px;
+                            display: block;
+                            border-radius: 2px;
+                            overflow: hidden;
+                            box-sizing: border-box;
+                            border: 2px solid transparent;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+
+                .next {
+                    cursor: pointer;
+                    pointer-events: auto;
+                    
+                    button {
+                        width: 340px;
+                        height: 50px;
+                        background-color: #6C9460;
+                        border-radius: 6px;
+                        border: none;
+                        font-size: 16px;
+                        font-family: "EBSHunminjeongeumSBA";
+                        line-height: 30px;
+                        color: #fff;
+                        cursor: pointer;
+                        pointer-events: auto;
+                    }
+                }
+            }
+            article.set_artwork {
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-grow: 1;
+                gap: 40px;
+                .title {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    span {
+                        font-family: "EBSHunminjeongeumSBA";
+                        line-height: 22px;
+                        color: #6C9460;
+                    }
+                    h3 {
+                        font-family: "EBSHunminjeongeumSBA";
+                        font-size: 32px;
+                        line-height: 42px;
+                        color: #222;
+                    }
+                }
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 24px;
+                    li {
+                        aspect-ratio: 1/1;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #fff;
+                        padding: 0;
+                        border-radius: 2px;
+                        overflow: hidden;
+                        a {
+                            width: 208px;
+                            height: 208px;
+                            display: block;
+                            border-radius: 2px;
+                            overflow: hidden;
+                            box-sizing: border-box;
+                            border: 2px solid transparent;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+            article.set_bg {
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-grow: 1;
+                gap: 40px;
+                .title {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    span {
+                        font-family: "EBSHunminjeongeumSBA";
+                        line-height: 22px;
+                        color: #6C9460;
+                    }
+                    h3 {
+                        font-family: "EBSHunminjeongeumSBA";
+                        font-size: 32px;
+                        line-height: 42px;
+                        color: #222;
+                    }
+                }
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 24px;
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        aspect-ratio: 1/1;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        border-radius: 2px;
+                        a {
+                            width: 152px;
+                            height: 240px;
+                            display: flex;
+                            flex-direction: column;
+                            border-radius: 2px;
+                            box-sizing: border-box;
+                            border: 2px solid transparent;
+                            outline: 2px solid transparent;
+                            color: #222;
+                            font-size: 20px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        p {
+                            color: #222;
+                            font-size: 20px;
+                            text-align: center;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            article.set_bookcase {
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-grow: 1;
+                height: 100%;
+                .bookcase_inner {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+                }
+                .title {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    height: 306px;
+                    span {
+                        font-family: "EBSHunminjeongeumSBA";
+                        line-height: 22px;
+                        color: #6C9460;
+                    }
+                    h3 {
+                        font-family: "EBSHunminjeongeumSBA";
+                        font-size: 32px;
+                        line-height: 42px;
+                        color: #222;
+                    }
+                    .bookcase_intro {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        justify-content: flex-end;
+                        flex-grow: 1;
+                        box-sizing: border-box;
+                        width: 100%;
+                        gap: 8px;
+                        padding: 0 80px;
+                        textarea {
+                            display: flex;
+                            align-items: center;
+                            font-family: "Pretendard";
+                            width: 100%;
+                            border: none;
+                            border-bottom: 1px solid #bebebe;
+                            outline: none;
+                            font-size: 20px;
+                            color: #434343;
+                            font-weight: 400;
+                            box-sizing: border-box;
+                            padding: 10px;
+                            white-space: pre-wrap;
+                            overflow-y: hidden;
+                            resize: none;
+                            &::placeholder {
+                                color: #bebebe;
+                                font-size: 16px;
+                                display: flex;
+                                align-items: center;
+                                line-height: 24px;
+                            }
+                        }
+                        .intro_text {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            gap: 8px;
+                            span {
+                                font-family: "Pretendard";
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                font-size: 16px;
+                                line-height: 180%;
+                                width: fit-content;
+                                color: #bebebe;
+                                text-align: right;
+                                padding-inline: 10px;
+                                &#error_case {
+                                    display: none;
+                                }
+                                &#textCount {
+                                    text-align: right;
+                                    flex-grow: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .next {
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                justify-content: flex-end;
+                padding: 0;
+                box-sizing: border-box;
+                p.mypage {
+                    font-size: 0.875em;
+                    font-family: "Pretendard";
+                    color: #767676;
+                }
+                a {
+                    position: absolute;
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    left: 0;
+                    align-items: center;
+                    margin-bottom: 4px;
+                }
+                button {
+                    width: 340px;
+                    height: 50px;
+                    background-color: #B5CFB0;
+                    border-radius: 6px;
+                    border: none;
+                    font-size: 16px;
+                    font-family: "EBSHunminjeongeumSBA";
+                    line-height: 30px;
+                    color: #fff;
+                    cursor: pointer;
+                    pointer-events: none;
+                }
+
+                &:has(article.set_intro) {
+                    button {
+                        pointer-events: auto;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .line_pc {
+            display: flex;
+            gap: 2px;
+            align-items: center;
+            justify-content: space-between;
+            .active {
+                width: calc(50% - 2px);
+                border-bottom: 10px solid #6C9460;
+            }
+            .inactive {
+                width: calc(50% - 2px);
+                border-bottom: 10px solid #D1E1CE;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    #dim {
+        display: none;
+    }
+    main {
+        max-width: 100%;
+        height: 100dvh;
+        background-color: #F6F3EE;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .pc_wrap {
+            display: none;
+        }
+        .mobile_wrap {
+            display: flex;
+            flex-direction: column;
+            height: 100dvh !important;
+            background-color: #F6F3EE;
+            &.intro {
+                background-image: url(../image/add_deco_bgi.png);
+                background-size: cover;
+                background-position: center;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.75);
+                }
+                .header_wrap {
+                    border-bottom: 1px solid rgba(246, 243, 238, 0.25);
+                    .home {
+                        img {
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+            .header_wrap {
+                position: fixed;
+                width: 100%;
+                .header_mo {
+                    top: 0;
+                    height: 54px;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-inline: 20px;
+                    .home {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 24px;
+                        height: 24px;
+                        img {
+                            width: 8px;
+                            height: 16px;
+                        }
+                    }
+                    .menu {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .line_mo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 2px;
+                    width: 100%;
+                    .active {
+                        width: calc(50% - 2px);
+                        border-bottom: 2px solid #6C9460;
+                    }
+                    .inactive {
+                        width: calc(50% - 2px);
+                        border-bottom: 2px solid #D1E1CE;
+                    }
+                }
+            }
+            section.select_set {
+                position: relative;
+                padding-inline: 20px;
+                flex-grow: 1;
+                width: 100%;
+                box-sizing: border-box;
+                justify-content: center;
+                align-items: flex-start;
+                overflow-y: auto;
+                z-index: 999;
+                border-radius: 10px;
+                padding-bottom: 140px;
+                margin-top: 54px;
+                padding-top: 38px;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                &:has(article.set_bg) {
+                    height: auto;
+                }
+                &:has(article.set_bookcase) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding-bottom: 0;
+                    button {
+                    }
+                    p.mypage {
+                    }
+                }
+                article.set_intro {
+                    width: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 1;
+                    gap: 40px;
+                    .title {
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                        gap: 16px;
+                        opacity: 0.1;
+                        h3 {
+                            font-family: "EBSHunminjeongeumSBA";
+                            font-size: 32px;
+                            line-height: 1.5;
+                            font-weight: 400;
+                            color: #F6F3EE;
+                        }
+                        p {
+                            font-family: "Pretendard";
+                            font-size: 14px;
+                            line-height: 1.5;
+                            color: #F6F3EE;
+                            font-weight: 400;
+                        }
+                    }
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        gap: 16px;
+                        width: 100%;
+                        li {
+                            width: calc(50% - 8px);
+                            aspect-ratio: 1/1;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: #fff;
+                            padding: 0;
+                            border-radius: 2px;
+                            overflow: hidden;
+                            box-sizing: border-box;
+                            a {
+                                aspect-ratio: 1/1;
+                                display: block;
+                                border-radius: 2px;
+                                overflow: hidden;
+                                box-sizing: border-box;
+                                border: 2px solid transparent;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+
+                    .next {
+                        position: fixed;
+                        background-color: #fff;
+                        /* background: linear-gradient(to bottom, rgba(246, 243, 238, 0), rgba(246, 243, 238, 1)); */
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 20px 20px 30px;
+                        bottom: 0;
+                        border-radius: 10px 10px 0 0;
+
+                        box-sizing: border-box;
+                        z-index: 999;
+
+
+                        .intro_close {
+                            /* position: absolute; */
+                            /* right: 20px; */
+                            /* top: 20px; */
+                            width: 100%;
+                            display: flex;
+                            margin-inline: auto;
+                            flex-grow: 1;
+                            justify-content: flex-end;
+                            text-align: right;
+                            /* margin: 0; */
+
+                            a {
+                                display: block;
+                                width: 24px;
+                                height: 24px;
+                            }
+                        }
+
+                        h3 {
+                            font-family: "EBSHunminjeongeumSBA";
+                            font-size: 28px;
+                            line-height: 1.5;
+                            color: #222;
+                            margin-block: 16px;
+                            text-align: center;
+                        }
+
+                        p.mypage {
+                            font-size: 0.875em;
+                            font-family: "Pretendard";
+                            color: #767676;
+                        }
+                        /* a {
+                            position: absolute;
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            left: 0;
+                            align-items: center;
+                            margin-bottom: 4px;
+                        } */
+
+                        button {
+                            width: 100%;
+                            height: 50px;
+                            background-color: #6C9460;
+                            border-radius: 6px;
+                            border: none;
+                            font-size: 20px;
+                            font-family: "EBSHunminjeongeumSBA";
+                            line-height: 30px;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                article.set_artwork {
+                    width: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 1;
+                    gap: 40px;
+
+                    .title {
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                        gap: 6px;
+
+                        span {
+                            font-family: "EBSHunminjeongeumSBA";
+                            line-height: 22px;
+                            color: #6C9460;
+                        }
+
+                        h3 {
+                            font-family: "EBSHunminjeongeumSBA";
+                            font-size: 32px;
+                            line-height: 42px;
+                            color: #222;
+                        }
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        gap: 16px;
+                        width: 100%;
+
+                        li {
+                            width: calc(50% - 8px);
+                            /* flex-grow: 1; */
+                            aspect-ratio: 1/1;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: #fff;
+                            padding: 0;
+                            border-radius: 2px;
+                            overflow: hidden;
+                            box-sizing: border-box;
+
+                            a {
+                                aspect-ratio: 1/1;
+                                display: block;
+                                border-radius: 2px;
+                                overflow: hidden;
+                                box-sizing: border-box;
+                                border: 2px solid transparent;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+
+                    .next {
+                        position: fixed;
+                        background: linear-gradient(to bottom, rgba(246, 243, 238, 0),rgba(246, 243, 238, 0.5) 15%, rgba(246, 243, 238, 1) 30%);
+                        /* background: linear-gradient(to bottom, rgba(246, 243, 238, 0), rgba(246, 243, 238, 1)); */
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 30px 20px;
+                        bottom: 0;
+
+                        box-sizing: border-box;
+
+                        p.mypage {
+                            font-size: 0.875em;
+                            font-family: "Pretendard";
+                            color: #767676;
+                        }
+                        a {
+                            position: absolute;
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            left: 0;
+                            align-items: center;
+                            margin-bottom: 4px;
+                        }
+
+                        button {
+                            width: 100%;
+                            height: 50px;
+                            background-color: #B5CFB0;
+                            border-radius: 6px;
+                            border: none;
+                            font-size: 20px;
+                            font-family: "EBSHunminjeongeumSBA";
+                            line-height: 30px;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+                article.set_bg {
+                    width: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 1;
+                    gap: 40px;
+
+                    .title {
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                        gap: 6px;
+
+                        span {
+                            font-family: "EBSHunminjeongeumSBA";
+                            line-height: 22px;
+                            color: #6C9460;
+                        }
+
+                        h3 {
+                            font-family: "EBSHunminjeongeumSBA";
+                            font-size: 32px;
+                            line-height: 42px;
+                            color: #222;
+                        }
+                    }
+                    textarea {
+                        display: flex;
+                        align-items: center;
+                        font-family: "Pretendard";
+                        width: 100%;
+                        /* min-height: 24px; */
+                        line-height: 1.5;
+                        border: none;
+                        border-bottom: 1px solid #bebebe;
+                        outline: none;
+                        font-size: 20px;
+                        color: #434343;
+                        font-weight: 400;
+                        box-sizing: border-box;
+                        padding: 10px;
+                        white-space: pre-wrap;
+                        overflow-y: hidden;
+                        /* 세로 스크롤바 숨기기 */
+                        resize: none;
+                        /* 사용자가 크기 조절을 못하게 하려면 추가 */
+
+                        &::placeholder {
+                            color: #bebebe;
+                            font-size: 16px;
+                            display: flex;
+                            align-items: center;
+                            line-height: 24px;
+                        }
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        gap: 16px;
+                        width: 100%;
+
+                        li {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            width: calc(50% - 8px);
+                            /* width: 100%; */
+                            /* height: 240px; */
+                            /* flex-grow: 1; */
+                            /* aspect-ratio: 1/1; */
+                            align-items: center;
+                            justify-content: center;
+                            /* background-color: #fff; */
+                            padding: 0;
+                            border-radius: 2px;
+                            overflow: hidden;
+                            box-sizing: border-box;
+
+                            a {
+                                /* aspect-ratio: 1/1; */
+                                width: 100%;
+                                height: 240px;
+                                display: block;
+                                border-radius: 2px;
+                                overflow: hidden;
+                                box-sizing: border-box;
+                                border: 2px solid transparent;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    object-position: top;
+                                }
+                            }
+
+                            p {
+                                color: #222;
+                                font-size: 20px;
+                                text-align: center;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+
+                    .next {
+                        position: fixed;
+                        /* background: linear-gradient(to bottom, rgba(246, 243, 238, 0), rgba(246, 243, 238, 1)); */
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 30px 20px;
+                        bottom: 0;
+
+                        box-sizing: border-box;
+
+                        p.mypage {
+                            font-size: 0.875em;
+                            font-family: "Pretendard";
+                            color: #767676;
+                        }
+                        a {
+                            position: absolute;
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            left: 0;
+                            align-items: center;
+                            margin-bottom: 4px;
+                        }
+
+                        button {
+                            width: 100%;
+                            height: 50px;
+                            background-color: #B5CFB0;
+                            border-radius: 6px;
+                            border: none;
+                            font-size: 20px;
+                            font-family: "EBSHunminjeongeumSBA";
+                            line-height: 30px;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                article.set_bookcase {
+                    width: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 1;
+                    gap: 40px;
+
+                    .bookcase_inner {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 100%;
+
+                        width: 100%;
+                        /* gap: 40px; */
+                    }
+                    .title {
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        gap: 6px;
+                        /* margin-top: calc(126px - 38px); */
+
+                        span {
+                            font-family: "EBSHunminjeongeumSBA";
+                            line-height: 22px;
+                            color: #6C9460;
+                        }
+
+                        h3 {
+                            font-family: "EBSHunminjeongeumSBA";
+                            font-size: 32px;
+                            line-height: 42px;
+                            color: #222;
+                        }
+                        .bookcase_intro {
+                            margin-top: 40px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                            justify-content: flex-end;
+                            height: 100%;
+                            /* margin-top: 160px; */
+                            flex-grow: 1;
+                            box-sizing: border-box;
+                            width: 100%;
+                            gap: 8px;
+                            /* height: 40px; */
+                            /* border: 2px solid #E1E1E1; */
+                            border-radius: 2px;
+                            /* padding: 0 80px; */
+    
+                            textarea {
+                                display: flex;
+                                align-items: center;
+                                font-family: "Pretendard";
+                                width: 100%;
+                                /* height: auto; */
+                                line-height: 1.5;
+                                border: none;
+                                border-bottom: 1px solid #bebebe;
+                                outline: none;
+                                font-size: 16px;
+                                color: #434343;
+                                font-weight: 400;
+                                box-sizing: border-box;
+                                padding: 10px;
+                                white-space: pre-wrap;
+                                overflow-y: hidden;
+                                /* 세로 스크롤바 숨기기 */
+                                resize: none;
+                                background-color: transparent;
+                                /* 사용자가 크기 조절을 못하게 하려면 추가 */
+    
+                                &::placeholder {
+                                    color: #bebebe;
+                                    font-size: 14px;
+                                    display: flex;
+                                    align-items: center;
+                                    line-height: 24px;
+                                }
+                            }
+    
+                            .intro_text {
+                                display: flex;
+                                justify-content: space-between;
+                                /* flex-direction: column; */
+                                width: 100%;
+                                gap: 8px;
+    
+                                span {
+                                    font-family: "Pretendard";
+    
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-end;
+                                    font-size: 14px;
+                                    line-height: 180%;
+                                    width: fit-content;
+                                    color: #bebebe;
+                                    text-align: right;
+                                    padding-inline: 10px;
+    
+                                    &#error_case {
+                                        display: none;
+                                    }
+    
+                                    &#textCount {
+                                        text-align: right;
+                                        flex-grow: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        gap: 16px;
+                        width: 100%;
+
+                        li {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            width: calc(50% - 8px);
+                            /* width: 100%; */
+                            /* height: 240px; */
+                            /* flex-grow: 1; */
+                            /* aspect-ratio: 1/1; */
+                            align-items: center;
+                            justify-content: center;
+                            /* background-color: #fff; */
+                            padding: 0;
+                            border-radius: 2px;
+                            overflow: hidden;
+                            box-sizing: border-box;
+
+                            a {
+                                /* aspect-ratio: 1/1; */
+                                width: 100%;
+                                height: 240px;
+                                display: block;
+                                border-radius: 2px;
+                                overflow: hidden;
+                                box-sizing: border-box;
+                                border: 2px solid transparent;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    object-position: top;
+                                }
+                            }
+
+                            p {
+                                color: #222;
+                                font-size: 20px;
+                                text-align: center;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+
+                    .next {
+                        position: fixed;
+                        left: 0;
+                        /* background: linear-gradient(to bottom, rgba(246, 243, 238, 0), rgba(246, 243, 238, 1)); */
+                        width: 100%;
+                        display: flex;
+                        flex-grow: 1;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-end;
+                        gap: 8px;
+                        padding: 30px 20px;
+                        bottom: 0;
+                        box-sizing: border-box;
+
+                        p.mypage {
+                            font-size: 0.875em;
+                            font-family: "Pretendard";
+                            color: #767676;
+                        }
+                        a {
+                            position: absolute;
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            left: 0;
+                            align-items: center;
+                            margin-bottom: 4px;
+                        }
+
+                        button {
+                            width: 100%;
+                            height: 50px;
+                            background-color: #B5CFB0;
+                            border-radius: 6px;
+                            border: none;
+                            font-size: 20px;
+                            font-family: "EBSHunminjeongeumSBA";
+                            line-height: 30px;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+    }
+}

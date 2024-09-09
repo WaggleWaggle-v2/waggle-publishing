@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <title>wgwg_dev</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="image/favicon_wgwg.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="image/favicon_wgwg.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="image/favicon_wgwg.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="image/favicon_wgwg.png">
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+
+    <!-- Reset CSS and Custom Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/add_deco.css">
+    <!-- <link rel="stylesheet" href="css/name.css"> -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
+
+<!-- favicon -->
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+
+    <!-- Swiper CSS and JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	
+    <!-- Your Custom JavaScript -->
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        
+        
+        <div id="add_deco">
+            <main id="name">
+                <div id="dim">
+                </div>
+
+                <!-- pc_wrap -->
+                <div class="pc_wrap">
+                    <header class="header_pc">
+                        <div class="home">
+                            <a href="index.html">
+                                <img src="image/wgwg_logo.svg" alt="prev">
+                            </a>
+                        </div>
+                        <div class="tab">
+                            <div class="tab_menu">
+                                <a href="#">
+                                    <img
+                                        src="image/wgwg_menu.svg"
+                                        alt="prev"
+                                        data-default-src="image/wgwg_menu.svg"
+                                        data-active-src="image/wgwg_menu_X.svg">
+                                </a>
+                            </div>
+                            <div class="tab_btm">
+                                <ul>
+                                    <div class="hello">
+                                        <p>안녕하신가<br>
+                                            <span>와그르와그르</span>님</p>
+                                    </div>
+                                    <li>
+                                        <a href="">마이페이지</a>
+                                    </li>
+                                    <li>
+                                        <a href="">유니어스</a>
+                                    </li>
+                                    <li>
+                                        <a href="">문의하기</a>
+                                    </li>
+                                    <div class="log_out">
+                                        <a href="">로그아웃</a>
+                                    </div>
+                                </ul>
+                                <img src="image/wgwg_menu-1.svg" alt="prev">
+                            </div>
+                        </div>
+                    </header>
+                    <section class="select_set">
+                        <div class="set_close">
+                            <a href=""><img src="image/artwork_x.svg" alt=""></a>
+                        </div>
+                        <article class="set_bg">
+                            <div class="title">
+                                <span>둘.</span>
+                                <h3>배경을 선택해 주시오.</h3>
+                            </div>
+                            
+                        <ul class="list">
+                            <li class="light"><a href=""><img src="image/light.png" alt=""></a><p>낮</p></li>
+                            <li class="dark"><a href=""><img src="image/dark.png" alt=""></a><p>밤</p></li>
+                        </ul>
+                        <form class="next">
+                            <p class="mypage">마이페이지에서 재설정이 가능합니다.</p>
+                                <a href="add_deco_1.html"><img src="image/prev_green.svg" alt=""></a>
+                                <button type="button" onclick="location.href='add_deco_3.html'">
+                                    다 음
+                                </button>
+                        </form>
+                        </article>
+                    </section>
+                    <div class="line_pc">
+                        <span class="inactive"></span>
+                        <span class="active"></span>
+                        <span class="inactive"></span>
+                    </div>
+                </div>
+                
+                
+
+                    <!-- mobile_wrap -->
+                    <div class="mobile_wrap">
+                        <div class="header_wrap">
+                            <header class="header_mo">
+                                <a href="add_deco_1.html" class="home"><img src="image/prev.svg" alt="prev"></a>
+                            </header>
+                            <div class="line_mo">
+                                <span class="inactive"></span>
+                                <span class="active"></span>
+                                <span class="inactive"></span>
+                            </div>
+                        </div>
+                        <section class="select_set">
+                            <article class="set_bg">
+                                <div class="title">
+                                    <span>둘.</span>
+                                    <h3>배경을 선택해 주시오.</h3>
+                                </div>
+                            <ul class="list bg_list">
+                                <li class="light"><a href=""><img src="image/light.png" alt=""></a><p>낮</p></li>
+                                <li class="dark"><a href=""><img src="image/dark.png" alt=""></a><p>밤</p></li>
+                            </ul>
+                            <form class="next">
+                                <p class="mypage">마이페이지에서 재설정이 가능합니다.</p>
+                                <button type="button" onclick="location.href='add_deco_3.html'">
+                                    다 음
+                                </button>
+                            </form>
+                            </article>
+                        </section>
+                    </div>
+                
+            </main>
+        </div>
+    </div>
+</body>
+<script role="tab_menu">
+    $(document).ready(function () {
+        // 처음에 .tab_btm ul 숨기기
+
+        $('.tab_btm ul').hide();
+
+        $('.tab_menu a').on('click', function (e) {
+
+            e.preventDefault(); // 기본 동작 방지
+
+            $('.tab_btm ul').slideToggle(); // 메뉴 토글
+
+            // 이미지 변경
+
+            const $img = $(this).find('img');
+            $img.attr(
+                'src',
+                $img.attr('src') === $img.data('default-src')
+                    ? $img.data('active-src')
+                    : $img.data('default-src')
+            );
+
+        });
+
+        // 배경 클릭 시 슬라이드 업
+
+        $(document).on('click', function (e) {
+
+            if (!$(e.target).closest('.tab_menu, .tab_btm').length) {
+                $('.tab_btm ul').slideUp();
+                $('.tab_menu img').attr('src', $('.tab_menu img').data('default-src')); // 이미지 초기화
+            }
+        });
+    });
+</script>
+<script role="list">
+    $(document).ready(function() {
+        function resetStyles() {
+            $('.select_set').css('background-color', ''); // 초기화
+            $('.title h3').css('color', ''); // 초기화
+            $('.light p').css('color', ''); // 초기화
+            $('.mobile_wrap').css('background-color', ''); // 모바일 배경색 초기화
+            $('.header_mo a img').css('filter', ''); // 초기화
+            $('.list li a').css({
+                'opacity': '0.5',
+                'border': '2px solid transparent',
+            });
+            $('.list li p').css({
+                'opacity': '0.5',
+                'color': '',
+                'font-weight': ''
+            });
+            $('button').css({
+                'pointer-events': 'none',
+                'background-color': ''
+            });
+        }
+
+        function resetToInitialState() {
+            resetStyles();
+            // 초기 상태로 되돌리기 위해 추가적인 초기화 작업
+            $('.list li a').css({
+                'opacity': '',
+                'border': '2px solid transparent',
+            });
+            $('.list li p').css({
+                'opacity': '',
+                'color': '',
+                'font-weight': ''
+            });
+            $('button').css({
+                'pointer-events': '',
+                'background-color': ''
+            });
+        }
+
+        $('.list li a').on('click', function(event) {
+            event.preventDefault();
+            // 모든 요소 초기화
+            resetStyles();
+    
+            // 선택된 요소 스타일 적용
+            $(this).css({
+                'opacity': '1',
+                'border': '2px solid #6C9460',
+            });
+            $(this).siblings('p').css({
+                'opacity': '1',
+                'color': '#6C9460',
+                'font-weight': '700'
+            });
+    
+            // 배경색 변경
+            if ($(this).parent().hasClass('dark')) {
+                $('.select_set').css('background-color', '#222');
+                $('.title h3').css('color', '#fff');
+                $('.light p').css('color', '#fff');
+            } else {
+                $('.select_set').css('background-color', ''); // 초기화
+                $('.title h3').css('color', ''); // 초기화
+                $('.light p').css('color', ''); // 초기화
+            }
+
+            // .mobile_wrap 배경색 변경
+            if ($(this).closest('.mobile_wrap, .pc_wrap').length) {
+                $('.mobile_wrap').css('background-color', '#222');
+                $('.title h3').css('color', '#fff');
+                $('.light p').css('color', '#fff');
+                $('.header_mo a img').css('filter', 'invert(100%)');
+            } else {
+                $('.mobile_wrap').css('background-color', ''); // 모바일 배경색 초기화
+                $('.title h3').css('color', ''); // 초기화
+                $('.light p').css('color', ''); // 초기화
+                $('.header_mo a img').css('filter', '');
+            }
+    
+            // 버튼 활성화
+            $('button').css({
+                'pointer-events': 'auto',
+                'background-color': '#6C9460'
+            });
+        });
+
+        // .light 클릭 시 초기화 및 .dark 불투명도 50%
+        $('.light a').on('click', function(event) {
+            event.preventDefault();
+            resetToInitialState();
+            $('.dark a').css('opacity', '0.5');
+            $('.dark p').css('opacity', '0.5');
+            // 선택된 요소 스타일 적용
+            $(this).css({
+                'opacity': '1',
+                'border': '2px solid #6C9460',
+            });
+            $(this).siblings('p').css({
+                'opacity': '1',
+                'color': '#6C9460',
+                'font-weight': '700'
+            });
+
+            // 버튼 활성화
+            $('button').css({
+                'pointer-events': 'auto',
+                'background-color': '#6C9460'
+            });
+        });
+
+        // 해상도 변경 시 초기화
+        let lastWidth = $(window).width();
+        $(window).on('resize', function() {
+            let currentWidth = $(window).width();
+            if ((lastWidth <= 767 && currentWidth > 767) || (lastWidth > 767 && currentWidth <= 767)) {
+                resetToInitialState();
+            }
+            lastWidth = currentWidth;
+        });
+    });
+</script>
+</html>
+

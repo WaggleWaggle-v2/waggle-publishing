@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <title>wgwg_dev</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="image/favicon_wgwg.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="image/favicon_wgwg.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="image/favicon_wgwg.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="image/favicon_wgwg.png">
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+
+    <!-- Reset CSS and Custom Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <!-- <link rel="stylesheet" href="css/name.css"> -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
+
+<!-- favicon -->
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+
+    <!-- Swiper CSS and JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	
+    <!-- Your Custom JavaScript -->
+    <script src="js/script.js"></script>
+    
+</head>
+<body>
+    <div class="wrap">
+        <div id="login">
+            <main>
+                <!-- <div class="login_bg"><img src="image/login_bg_pc.png" alt="wgwg_bg"></div> -->
+                <article>
+                    <div class="title">
+                        <h2>
+                            <div class="haetae"><img src="image/Haitai.svg" alt="해태"></div>
+                            <span><img src="image/Union(w).svg" alt="와"></span>
+                            <span><img src="image/Union(g).svg" alt="글"></span>
+                            <span><img src="image/Union(w).svg" alt="와"></span>
+                            <span><img src="image/Union(g).svg" alt="글"></span>
+                        </h2>
+                        <p>- 한글 기념 소통창 -</p>
+                    </div>
+                </article>
+                <section>
+                    <h3>간편 로그인으로 <span>와글와글</span>을 이용해보세요!</h3>
+                    <div class="login_btn">
+                        <button class="kakao" onclick="location.href='name.html'"><img src="image/kakao icon.svg" alt="카카오톡">카카오톡</button>
+                        <button class="naver"><img src="image/naver icon.svg" alt="네이버">네이버</button>
+                        <button class="google"><img src="image/google icon.svg" alt="구글">구글</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $('#login').load('login.html');
+    });
+</script>
+</html>
+

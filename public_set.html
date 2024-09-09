@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>wgwg_dev</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="image/favicon_wgwg.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="image/favicon_wgwg.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="image/favicon_wgwg.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="image/favicon_wgwg.png">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+        <!-- Google Fonts -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;900&display=swap">
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap">
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+
+        <!-- Reset CSS and Custom Styles -->
+        <link rel="stylesheet" href="css/reset.css">
+        <!-- <link rel="stylesheet" href="css/name.css"> -->
+        <link rel="stylesheet" href="css/public_set.css">
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet"/>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="/static/img/favicon.ico">
+
+        <!-- Swiper CSS and JavaScript -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Your Custom JavaScript -->
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <main id="name">
+                <header class="header_pc">
+                    <div class="home">
+                        <a href="index.html">
+                            <img src="image/wgwg_logo.svg" alt="prev">
+                        </a>
+                    </div>
+                    <div class="tab">
+                        <div class="tab_menu">
+                            <a href="#">
+                                <img
+                                    src="image/wgwg_menu.svg"
+                                    alt="prev"
+                                    data-default-src="image/wgwg_menu.svg"
+                                    data-active-src="image/wgwg_menu_X.svg">
+                            </a>
+                        </div>
+                        <div class="tab_btm">
+                            <ul>
+                                <div class="hello">
+                                    <p>안녕하신가<br>
+                                        <span>와그르와그르</span>님</p>
+                                </div>
+                                <li>
+                                    <a href="">마이페이지</a>
+                                </li>
+                                <li>
+                                    <a href="">유니어스</a>
+                                </li>
+                                <li>
+                                    <a href="">문의하기</a>
+                                </li>
+                                <div class="log_out">
+                                    <a href="">로그아웃</a>
+                                </div>
+                            </ul>
+                            <img src="image/wgwg_menu-1.svg" alt="prev">
+                        </div>
+                    </div>
+                </header>
+                <section class="mobile">
+                    <header class="header_mo">
+                        <a href="index.html" class="home"><img src="image/prev.svg" alt="prev"></a>
+                        <!-- <a href="index.html" class="menu">
+                            <img src="image/menu.svg" alt="prev">
+                        </a> -->
+                    </header>
+                    <div class="line_mo">
+                        <span class="inactive"></span>
+                        <span class="active"></span>
+                    </div>
+                </section>
+                <article>
+                    <div class="inner">
+                        <div class="content">
+                            <span>둘.</span>
+                            <h3>공개 하겠소?</h3>
+                        </div>
+                        <div class="public_private">
+                            <a href="" class="public">
+                                <img src="image/public.svg" alt="public">
+                                <span>모두에게<br>공개 하겠소</span>
+                            </a>
+                            <a href="" class="private">
+                                <img src="image/Private.svg" alt="private">
+                                <span>친구에게만<br>공개 하겠소</span>
+                            </a>
+                        </div>
+                        <div class="public_private_desc">
+                            <span class="private_desc">와글와글 메인에 무작위로 공개 됩니다.</span>
+                            <p>모든 사람이 방명록 갯수랑 공개된 방명록을 볼 수 있어요.</p>
+                        </div>
+                    </div>
+
+                    <form class="next">
+                        <p class="mypage">마이페이지에서 재설정이 가능합니다.</p>
+                        <button type="button" onclick="location.href='add_deco_intro.html'">
+                            나의 책장 만들기
+                        </button>
+                    </form>
+                </article>
+                <div class="line_pc">
+                    <span class="inactive"></span>
+                    <span class="active"></span>
+                </div>
+            </main>
+        </div>
+    </body>
+
+    <!---------------- script ---------------->
+    <script data-script="error event"></script>
+    <script>
+        $(document).ready(function () {
+            // 처음에 .tab_btm ul 숨기기
+
+            $('.tab_btm ul').hide();
+
+            $('.tab_menu a').on('click', function (e) {
+
+                e.preventDefault(); // 기본 동작 방지
+
+                $('.tab_btm ul').slideToggle(); // 메뉴 토글
+
+                // 이미지 변경
+
+                const $img = $(this).find('img');
+                $img.attr(
+                    'src',
+                    $img.attr('src') === $img.data('default-src')
+                        ? $img.data('active-src')
+                        : $img.data('default-src')
+                );
+
+            });
+
+            // 배경 클릭 시 슬라이드 업
+
+            $(document).on('click', function (e) {
+
+                if (!$(e.target).closest('.tab_menu, .tab_btm').length) {
+                    $('.tab_btm ul').slideUp();
+                    $('.tab_menu img').attr('src', $('.tab_menu img').data('default-src')); // 이미지 초기화
+                }
+            });
+        });
+    </script>
+
+<script role="public_private script">
+    $(document).ready(function() {
+        // .public_private a 클릭 시 .active 클래스 추가 및 .public_private_desc 표시
+        $('.public_private a').on('click', function(e) {
+            e.preventDefault(); // 기본 동작 방지
+            $('.public_private a').removeClass('active').css('opacity', '0.25'); // 기존 .active 클래스 제거 및 opacity 변경
+            $(this).addClass('active').css('opacity', '1'); // 클릭한 요소에 .active 클래스 추가 및 opacity 변경
+            $('.public_private_desc').css('display', 'flex'); // .public_private_desc 표시
+            $('.mypage').css('display', 'block'); // .public_private_desc 표시
+
+            // 클릭한 클래스가 .public인지 .private인지 확인
+            if ($(this).hasClass('private')) {
+                $('.public_private_desc span').text('링크로 초대된 사람만 볼 수 있습니다.');
+                $('.public_private_desc p').text('초대된 사람만 방명록 갯수랑 공개된 방명록을 볼 수 있어요.');
+            } else {
+                $('.public_private_desc span').text('와글와글 메인에 랜덤으로 공개 됩니다.');
+                $('.public_private_desc p').text('모든 사람이 방명록 갯수랑 공개된 방명록을 볼 수 있어요.');
+            }
+
+            // .next button의 배경색 변경
+            $('.next button').css('background-color', '#6C9460');
+            $('.next button').css('pointer-events', 'auto');
+        });
+    });
+</script>
+</html>

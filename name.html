@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <title>wgwg_dev</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="image/favicon_wgwg.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="image/favicon_wgwg.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="image/favicon_wgwg.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="image/favicon_wgwg.png">
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+
+    <!-- Reset CSS and Custom Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/name.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
+
+<!-- favicon -->
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+
+    <!-- Swiper CSS and JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	
+    <!-- Your Custom JavaScript -->
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrap">
+            <main id="name">
+                <header class="header_pc">
+                    <div class="home"">
+                        <a href="index.html">
+                            <img src="image/wgwg_logo.svg" alt="prev">
+                        </a>
+                    </div>
+                            <div class="tab">
+                                <div class="tab_menu">
+                                    <a href="#" >
+                                        <img src="image/wgwg_menu.svg" alt="prev" data-default-src="image/wgwg_menu.svg" data-active-src="image/wgwg_menu_X.svg">
+                                    </a>
+                                </div>
+                                <div class="tab_btm">
+                                    <ul>
+                                        <div class="hello"><p>안녕하신가<br><span>와그르와그르</span>님</p></div>
+                                        <li><a href="">마이페이지</a></li>
+                                        <li><a href="">유니어스</a></li>
+                                        <li><a href="">문의하기</a></li>
+                                        <div class="log_out"><a href="">로그아웃</a></div>
+                                    </ul>
+                                    <img src="image/wgwg_menu-1.svg" alt="prev">
+                                </div>
+                            </div>
+                </header>
+                <section class="mobile">
+                    <header class="header_mo">
+                        <a href="index.html" class="home"><img src="image/prev.svg" alt="prev"></a>
+                            <!-- <a href="index.html" class="menu">
+                                <img src="image/menu.svg" alt="prev">
+                            </a> -->
+                    </header>
+                    <div class="line_mo">
+                        <span class="active"></span>
+                        <span class="inactive"></span>
+                    </div>
+                </section>
+                <article>
+                    <div class="inner">
+                        <div class="content">
+                            <span>하나.</span>
+                            <h3>호패를 만드시오</h3>
+                        </div>
+                        <div class="textarea">
+                            <input class="nickname" type="text" placeholder="호명은 6글자 이하, 한글만 사용 가능해요.">
+                            <p>호명은 한글만 사용할 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <form class="next">
+                        <p class="mypage">마이페이지에서 재설정이 가능합니다.</p>
+                        <button type="submit">
+                            다음
+                        </button>
+                    </form>
+                </article>
+                <div class="line_pc">
+                    <span class="active"></span>
+                    <span class="inactive"></span>
+                </div>
+            </main>
+    </div>
+</body>
+
+<!---------------- script ---------------->
+<script data-script="error event">
+$(function() {
+    $('.nickname').on('input', function() {
+        if (this.value) {
+            $(this).css({
+                'font-size': '1.125em',
+                'font-weight': '600', // semibold
+                'font-family': 'Pretendard'
+            });
+        } else {
+            $(this).css({
+                'font-size': '0.875em',
+                'font-weight': '300'
+            });
+        }
+    });
+});
+$(function() {
+    const $nickname = $('.nickname');
+    const $mypage = $('.mypage');
+    const $warning = $('.textarea p');
+    const $button = $('button'); // 버튼 선택자 추가
+    const koreanRegex = /^[가-힣]+$/; // 완성된 한글 글자만 허용
+
+    // 페이지 로드 시 저장된 값 불러오기
+    const savedNickname = localStorage.getItem('nickname');
+    if (savedNickname) {
+        $nickname.val(savedNickname).trigger('input');
+    }
+
+    $nickname.on('input', function() {
+        const isNotEmpty = this.value.length > 0;
+        const isKorean = koreanRegex.test(this.value);
+        const isTooLong = this.value.length > 6;
+
+        // 입력된 값 저장
+        localStorage.setItem('nickname', this.value);
+
+        $(this).css({
+            'font-size': isNotEmpty ? '1.125em' : '0.875em',
+            'font-weight': isNotEmpty ? '600' : '300',
+            'border-bottom': (!isKorean && isNotEmpty) || isTooLong ? '1px solid #E75752' : '1px solid #6C9460'
+        });
+
+        $mypage.toggle(isKorean && this.value.length >= 1 && !isTooLong);
+        if (!isKorean && isNotEmpty) {
+            $warning.text('호명은 한글만 사용할 수 있습니다.').show();
+        } else if (isTooLong) {
+            $warning.text('최대 6글자만 사용할 수 있습니다.').show();
+        } else {
+            $warning.hide();
+        }
+
+        // 완성된 한글 한 글자 이상 입력 시 버튼 색상 변경 및 활성화
+        if (isKorean && isNotEmpty) {
+            $button.css({
+                'background-color': '#6C9460',
+                'pointer-events': 'auto' // 버튼 활성화
+            }).off('click').on('click', function(event) {
+                event.preventDefault(); // 기본 동작 방지
+                window.location.href = 'public_set.html'; // 버튼 클릭 시 이동
+            });
+        } else {
+            $button.css({
+                'background-color': '#B5CFB0',
+                'pointer-events': 'none' // 버튼 비활성화
+            }).off('click'); // 클릭 이벤트 제거
+        }
+    });
+
+    $mypage.hide();
+    $warning.hide();
+    $button.css('pointer-events', 'none'); // 초기 상태에서 버튼 비활성화
+});
+</script>
+<script>
+$(document).ready(function() {
+    // 처음에 .tab_btm ul 숨기기
+
+    $('.tab_btm ul').hide();
+
+
+    $('.tab_menu a').on('click', function(e) {
+
+        e.preventDefault(); // 기본 동작 방지
+
+        $('.tab_btm ul').slideToggle(); // 메뉴 토글
+
+
+        // 이미지 변경
+
+        const $img = $(this).find('img');
+        $img.attr('src', $img.attr('src') === $img.data('default-src') ? $img.data('active-src') : $img.data('default-src'));
+
+    });
+
+    // 배경 클릭 시 슬라이드 업
+
+    $(document).on('click', function(e) {
+
+        if (!$(e.target).closest('.tab_menu, .tab_btm').length) {
+            $('.tab_btm ul').slideUp();
+            $('.tab_menu img').attr('src', $('.tab_menu img').data('default-src')); // 이미지 초기화
+        }
+    });
+});
+    </script>
+</html>
+

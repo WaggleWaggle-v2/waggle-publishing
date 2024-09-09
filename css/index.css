@@ -1,0 +1,336 @@
+body{
+    background-color: #F6F3EE;
+}
+
+#landing{
+    position: relative;
+    background-image: url(../image/login_bg_mobile.png) ;
+    background-size: 170%;
+    background-repeat: repeat;
+    background-position: left 10px top 10px;
+    /* background-blend-mode: lighten; */
+}
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    height: 100dvh;
+    gap: 20px;
+    overflow-x: hidden;
+
+    
+
+
+    
+
+    .landing_title{
+        display: flex;
+        margin-top: 160px;
+        position: relative;
+        width: 100%;
+        /* height: 100vh; */
+        justify-content: center;
+    
+        .tree{
+            position: absolute;
+            left: -20px;
+            top: 0;
+            transform: translateY(-100%);
+
+        }
+        .title_desc{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            height: fit-content;
+    
+            h2{
+                font-size: 64px;
+                line-height: 1;
+                font-family: 'ChosunCentennial';
+                font-weight: 400;
+                color: #1f1e1b;
+            }
+            span{
+                font-size: 22px;
+                font-family: 'ChosunCentennial';
+                font-weight: 400;
+                color: #18316F;
+            }
+        }
+    .house{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translate(35%, 100%);
+    }
+    
+    }
+    .landing_sub{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 50px;
+        font-size: 16px;
+        text-align: center; 
+        padding-inline: 20px;
+        /* min-width: 100%; */
+        max-width: 356px;
+        box-sizing: border-box;
+
+        .sub_desc{
+            p{
+                font-family: 'Pretendard';
+            }
+            span{
+                font-family: 'EBSHunminjeongeumSBA';
+                font-weight: bold;
+            }
+        }
+        button{
+            all: unset;
+            font-family: 'EBSHunminjeongeumSBA';
+            /* font-weight: bold; */
+            width: 100%;
+            height: 50px;
+            border-radius: 6px;
+            background-color: #6C9460;
+            color: #fff;
+        }
+
+        
+    }
+}
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 356px;
+    margin: 0 auto;
+
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        flex-grow: 1;
+        gap: 30px;
+        
+
+        .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            h3{
+                font-size: 1.5rem;
+                text-align: center;
+                line-height: 1.5;
+            }
+            span{
+
+            }
+        }
+
+        .figure_list{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+
+            figure{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                border-radius: 6px;
+                background-color: #fff;
+                box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    
+                .profile_img{
+                    width: 92px;
+                    height: 122px;
+                    border-radius: 6px;
+                    overflow: hidden;
+    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .profile_desc{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    flex-grow: 1;
+                    justify-content: space-between;
+    
+                    h4{
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-size: 0.75rem;
+                        line-height: 23px;
+                    }
+                    span{
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+                        font-size: 0.75rem;
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+
+        
+
+        &.anyone{
+            margin-block: 70px;
+
+            .figure_list{
+
+                figure{
+
+                    .profile_img{
+                        min-width: 80px;
+                        max-width: 80px;
+                        min-height: 80px;
+                        max-height: 80px;
+
+                        object-fit: cover;
+                    }
+
+                    .profile_desc{
+                    overflow: hidden;
+                    flex-grow: 1;
+                        width: fit-content;
+
+
+                        p{
+                            display: block;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+
+            .reset{
+                all: unset;
+                pointer-events: auto;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 50px;
+                width: 100%;
+                font-family: 'EBSHunminjeongeumSBA';
+                font-size: 1rem;
+                color: #6C9460;
+                border: 1px solid rgba(108, 148, 96, 0.5);
+                padding: 0 20px;
+                border-radius: 6px;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px 20px;
+    height: 240px;
+    background-color: #222;
+    color: #fff;
+    box-sizing: border-box;
+    gap: 20px;
+
+    ul{
+        display: flex;
+        /* flex-direction: column; */
+        gap: 10px;
+
+        li{
+            display: flex;
+            align-items: center;
+
+            i{
+                vertical-align: middle;
+            }
+        }
+    }
+}
+#scroll_downs {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: -2%;
+    right: 2%;
+    /* right: 1%; */
+    /* left: 0; */
+    transform: translate(0, -35%);
+    opacity: 0.5;
+    opacity: 1;
+    /* width: 100%; */
+    z-index: 99999;
+
+    .mouse {
+        width: 3px;
+        padding: 8px 10px;
+        height: 24px;
+        border: 2px solid #6C9460;
+        border-radius: 25px;
+        opacity: 0.75;
+        /* box-sizing: content; */
+
+        .scroller {
+            width: 3px;
+            height: 10px;
+            border-radius: 25%;
+            background-color: #6C9460;
+            animation-name: scroller;
+            animation-duration: 2.25s;
+            animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+            animation-iteration-count: infinite;
+        }
+    }
+
+    
+
+    p {
+        display: block;
+        margin-top: 8px;
+        text-align: center;
+        color: #6C9460;
+    }
+}
+
+/* 키프레임은 영역 밖에 배치*/
+@keyframes scroller {
+0% { opacity: 0; }
+10% { transform: translateY(0); opacity: 1; }
+100% { transform: translateY(15px); opacity: 0;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    main{
+        height: 100%;
+        gap: 70px;
+    }
+}
