@@ -517,7 +517,7 @@ align-items: center;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        padding: 48px 20px;
+        padding: 0px 20px 100px 20px;
         height: 100dvb;
         gap: 20px;
         overflow-x: hidden;
@@ -533,9 +533,9 @@ align-items: center;
             .tree{
                 position: absolute;
                 width: 140px;
-                left: -20px;
+                left: -40px;
                 top: 0;
-                transform: translateY(-100%);
+                transform: translateY(-60%);
             }
     
             .title_desc{
@@ -564,7 +564,7 @@ align-items: center;
             .house{
                 position: absolute;
                 right: 0;
-                bottom: 0;
+                bottom: 15px;
                 transform: translate(35%, 100%);
             }
         }
@@ -780,7 +780,48 @@ align-items: center;
             }
         }
     }
-    
+    #arrow_downs {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        /* transform: translate(0, -35%); */
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 1;
+        z-index: 99999;
+        width: 24px;
+        height: 24px;
+
+        .arrow_box {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+
+            .arrow {
+                width: 10px;
+                height: 10px;
+                border-radius: 1px;
+                left: 50%;
+                transform: rotate(45deg);
+                box-sizing: border-box;
+                border: 2px solid transparent;
+                border-bottom: 2px solid #6C9460;
+                border-right: 2px solid #6C9460;
+                animation: scroll_downs 2.25s infinite;
+            }
+
+        }
+        p {
+            margin-top: 8px;
+            text-align: center;
+            color: #6C9460;
+        }
+    }
     
 }
 
@@ -806,4 +847,9 @@ align-items: center;
     0% { opacity: 0; }
     10% { transform: translateY(0); opacity: 1; }
     100% { transform: translateY(15px); opacity: 0; }
+}
+@keyframes scroll_downs {
+    0% { opacity: 0; }
+    10% { transform: translateY(0) rotate(45deg); opacity: 1; }
+    100% { transform: translateY(15px) rotate(45deg); opacity: 0; }
 }
