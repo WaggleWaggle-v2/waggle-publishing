@@ -46,7 +46,8 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <!-- Your Custom JavaScript -->
-        <script src="js/script.js"></script>
+        <script src="js/common.js"></script>
+        
 
     </head>
     <body>
@@ -283,6 +284,9 @@
 
             <!-- landing_PC -->
             <div id="landing_PC">
+                <header>
+                    <!-- header.html -->
+                </header>
                 <div id="scroll_downs">
                     <div class="mouse">
                         <div class="scroller"></div>
@@ -617,6 +621,10 @@
             $('#login').load('login.html');
         });
     </script>
+    <script data-script="header">
+        $("header").load("header.html");
+    </script>
+    
     <script role="swiper">
         document.addEventListener('DOMContentLoaded', () => {
             const swiperWrap = document.getElementById('swiper_wrap');
